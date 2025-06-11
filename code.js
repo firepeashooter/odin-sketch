@@ -29,9 +29,4 @@ containerDiv.addEventListener("mouseover", (e) => {
     }
 });
 
-containerDiv.addEventListener("mouseout", (e) => {
-    if (e.target.classList.contains("cube")){
-        e.target.classList.remove("coloured");
-    }
 
-})
