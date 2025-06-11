@@ -1,14 +1,30 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+
 .container{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    width: 1000px;
+    height: 1000px;
+    border: 8px solid blue;
 }
 
 .cube{
-    border: 8px solid black;
-    width: 100px;
-    height: 100px;
+    display: flex;
+    flex: 1;
+    border: 2px solid black;
+    
 }
 
 .coloured{
     background-color: orange;
+}
+
+.row{
+    display: flex;
+    flex: 1;
 }

@@ -1,25 +1,38 @@
 
 
 //Create a 16x16 grid of divs
+//Size in an int that specifies the size of the grid (it's a square)
 
-function createGrid(){
+function createGrid(size){
 
-    containerDiv = document.querySelector(".container");
+    const containerDiv = document.querySelector(".container");
 
-    for (let i = 0; i < (16 * 16); i++){
-        newDiv = document.createElement("div");
+    for (let i = 0; i < size; i++){ //Creates the rows in the container
 
-        newDiv.classList.add("cube");
-        containerDiv.appendChild(newDiv);
+        const newDivRow = document.createElement("div");
+
+        newDivRow.style.width = containerDiv.style.width;
+        newDivRow.classList.add("row");
+        containerDiv.appendChild(newDivRow);
+
+        for (let j = 0; j < size; j++){ //Create the cubes within the rows
+
+
+            const newDivCube = document.createElement("div");
+            newDivCube.classList.add("cube");
+
+            newDivRow.appendChild(newDivCube);
+        }
+
     };
 
 }
 
-createGrid();
+createGrid(50);
 
 //Creating the Hover Effect
-containerDiv = document.querySelector(".container");
-cubes = document.querySelectorAll(".cube");
+const containerDiv = document.querySelector(".container");
+const cubes = document.querySelectorAll(".cube");
 
 //Event Delegation
 
