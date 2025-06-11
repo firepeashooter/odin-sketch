@@ -1,0 +1,10 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cube{
+    border: 8px solid black;
+    width: 100px;
+    height: 100px;
+}
