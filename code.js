@@ -48,13 +48,15 @@ const cubes = document.querySelectorAll(".cube");
 //Current Colour selected
 let curColour = 'orange';
 
-//Event Delegation
+
+//Event Delegation for all the cubes in the container
 
 containerDiv.addEventListener("mouseover", (e) => {
     if (e.target.classList.contains("cube")){
         e.target.style.backgroundColor = curColour;
 
-        //Make the square darker ever time you hover over it
+        //Add ten to the current opacity of the square
+        e.target.style.opacity = parseFloat(getComputedStyle(e.target).opacity) + 0.1;
     }
 });
 

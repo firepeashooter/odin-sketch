@@ -11,15 +11,14 @@ body{
     flex-direction: column;
     width: 1000px;
     height: 1000px;
-    border: 8px solid blue;
+    border: 8px solid black;
 }
 
 .cube{
     display: flex;
     flex: 1;
-    
+    opacity: 0.5;
 }
-
 
 .row{
     display: flex;
