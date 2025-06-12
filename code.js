@@ -37,6 +37,7 @@ function deleteGrid(container){
     }
 }
 
+//Creates the initial grid
 createGrid(50);
 
 
@@ -55,33 +56,58 @@ containerDiv.addEventListener("mouseover", (e) => {
 });
 
 
-//Allowing Users to Specify Dimension
+//Event Delegation for Buttons
 
-const dimButton = document.querySelector(".dimension");
+const buttonContainer = document.querySelector(".left");
 
-dimButton.addEventListener("click", (e) => {
+buttonContainer.addEventListener( "click", (e) => {
+    
+    let target = e.target;
+    
+    switch(target.id){
 
-    //Promt the user for input size and save it to a variable
-    size = prompt("What Size would you like the grid to be?: ");
-
-
-    //Convert size to an integer so we can work with it
-    let numSize = Number(size);
-
-
-    //User input validation
-    if (Number.isInteger(numSize)){
-
-        if (numSize <= 100 && numSize >= 1){ 
+        //Allows users to change the dimension of thier grid
+        case "dim":
+            //Promt the user for input size and save it to a variable
+            size = prompt("What Size would you like the grid to be?: ");
             
-                deleteGrid(containerDiv);
-                createGrid(numSize);
+            
+            //Convert size to an integer so we can work with it
+            let numSize = Number(size);
+            
+            
+            //User input validation
+            if (Number.isInteger(numSize)){
+            
+                if (numSize <= 100 && numSize >= 1){ 
+                    
+                        deleteGrid(containerDiv);
+                        createGrid(numSize);
+            
+                }else{
+                    alert("Invalid Number! Must be an Integer between 1 and 100");
+                }
+            }else{
+                alert('Invalid Input! Must be an Integer between 1 and 100');
+            }
 
-        }else{
-            alert("Invalid Number! Must be an Integer between 1 and 100");
-        }
-    }else{
-        alert('Invalid Input! Must be an Integer between 1 and 100');
+            break;
+        
+        case "orange":
+
+            break;
+
+        case "green":
+
+            break;
+
+        case "blue":
+
+            break;
     }
+
+
+
+
 })
 
