@@ -64,10 +64,24 @@ dimButton.addEventListener("click", (e) => {
     //Promt the user for input size and save it to a variable
     size = prompt("What Size would you like the grid to be?: ");
 
-    //Delete the current grid
-    deleteGrid(containerDiv);
 
-    //Render the new grid
-    createGrid(size);
+    //Convert size to an integer so we can work with it
+    let numSize = Number(size);
+
+
+    //User input validation
+    if (Number.isInteger(numSize)){
+
+        if (numSize <= 100 && numSize >= 1){ 
+            
+                deleteGrid(containerDiv);
+                createGrid(numSize);
+
+        }else{
+            alert("Invalid Number! Must be an Integer between 1 and 100");
+        }
+    }else{
+        alert('Invalid Input! Must be an Integer between 1 and 100');
+    }
 })
 
