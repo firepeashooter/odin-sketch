@@ -1,6 +1,7 @@
 body{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 
@@ -27,4 +28,9 @@ body{
 .row{
     display: flex;
     flex: 1;
+}
+
+.dimension{
+    padding: 10px;
+    margin: 50px;
 }
