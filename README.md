@@ -1,2 +1,2 @@
-# odin-sketch
-A repo to follow along with the odin sketch project
+# sketch-pad
+A repo to create a rudimentary sketch pad website
