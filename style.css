@@ -20,9 +20,6 @@ body{
     
 }
 
-.coloured{
-    background-color: orange;
-}
 
 .row{
     display: flex;

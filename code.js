@@ -45,11 +45,14 @@ createGrid(50);
 const containerDiv = document.querySelector(".container");
 const cubes = document.querySelectorAll(".cube");
 
+//Current Colour selected
+let curColour = 'orange';
+
 //Event Delegation
 
 containerDiv.addEventListener("mouseover", (e) => {
     if (e.target.classList.contains("cube")){
-        e.target.classList.add("coloured");
+        e.target.style.backgroundColor = curColour;
 
         //Make the square darker ever time you hover over it
     }
@@ -95,13 +98,19 @@ buttonContainer.addEventListener( "click", (e) => {
         
         case "orange":
 
+            curColour = "orange";
+
             break;
 
         case "green":
 
+            curColour = "green";
+
             break;
 
         case "blue":
+
+            curColour = "lightblue";
 
             break;
     }
